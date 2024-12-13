@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLOR */
+:root {
+  --primary-color: #3b3030;
+  --font-color: #fff0f3;
+  --background: #84a98c;
+  --hover: #e9d1a0;
+  --span-color: #d7ac54;
+}
+/* FONT SIZE */
+:root {
+  --heading: 1.8em;
+  --nav: 1.4em;
+}
+/* FONT WEIGHT */
+:root {
+  --para: 400;
+  --head: 500;
+  --navLink: 600;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.body {
+  width: 100vw;
+height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding-top: 140px; */
+  background-color: var(--primary-color);
+  gap: 20px;
+ 
+}
+
+
+.body__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+.body__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 200px;
+  height: 200px;
+}
+.body__image img {
+  border-radius: 50%;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.body__content h3 {
+  font-size: 2em;
+  font-weight: var(--para);
+  letter-spacing: 1px;
+}
+.body__content span {
+  color: var(--span-color);
+}
+.body__content .role {
+  padding: 5px;
+  font-weight: 300;
+  font-size: 1.4em;
+}
+.body__content .para {
+  font-weight: var(--para);
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding-top:3px;
+
+}
+.button button {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: var(--head);
+  margin-top: 30px;
+  margin-right: 20px;
+}
+.button .hire {
+  border: none;
+  font-weight: var(--navLink);
+  box-shadow: 1px 0 1px var(--primary-color);
+  transition: 0.5s linear;
+  background-color: var(--hover);
+}
+.button a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.button .hire:hover {
+  background-color: var(--span-color);
+}
+
+.button .resume {
+  border: none;
+  background-color: var(--font-color);
+  font-weight: var(--navLink);
+  transition: 0.5s linear;
+}
+.button .resume:hover {
+  background-color: rgb(213, 197, 197);
+}
+@media screen and (max-width: 1015px) {
+  .body {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .body__content {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 464px) {
+  .body__content h3 {
+    font-size: 1.6em;
+  }
+  .body__content .role {
+    font-size: 1.3em;
+  }
+  .body__content .para {
+    font-size: 13px;
+  }
+}

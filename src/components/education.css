@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* COLOR */
+:root {
+  --primary-color: #3b3030;
+  --font-color: #fff0f3;
+  --background: #84a98c;
+  --hover: #e9d1a0;
+  --span-color: #d7ac54;
+  --para-color: #de9c1a;
+}
+/* FONT SIZE */
+:root {
+  --heading: 1.8em;
+  --nav: 1.4em;
+}
+/* FONT WEIGHT */
+:root {
+  --head: 500;
+  --navLink: 600;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.Edu-Content {
+  margin-top: 30px;
+
+  height: 500px;
+
+  padding: 20px;
+  box-shadow: 2px 2px 10px 1px #d4d0d0;
+
+  background-color: white;
+  border-radius: 15px;
+}
+.Edu-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  column-gap: 40px;
+  padding: 10px;
+}
+.edu-section {
+  margin: 10px 5px 0 5px;
+  line-height: 30px;
+}
+.edu-section h4 {
+  color: var(--para-color);
+  font-size: 1.2em;
+  font-weight: var(--head);
+}
+.Edu-details .degree {
+  font-size: 16px;
+}
+.edu-section p {
+  font-size: 14px;
+}
+.year {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.year button {
+  border: none;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--font-color);
+  font-size: 14px;
+}
+@media screen and (max-width: 1100px) {
+  .edu-section h4 {
+    font-size: 1em;
+  }
+  .Edu-Content {
+    height: 500px;
+  }
+    
+}
+@media screen and (max-width: 850px) {
+  .Edu-Content {
+    height: 600px;
+  }
+  .Edu-details .degree {
+    font-weight: var(--head);
+  }
+}
+@media screen and (max-width: 630px) {
+  .Edu-Content {
+    height: 750px;
+  }
+  .year{display: flex;
+    flex-direction: row;
+  justify-content: flex-start;
+align-items: center;
+margin-top: 10px;}
+}

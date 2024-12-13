@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* COLOR */
+:root {
+  --primary-color: #3b3030;
+  --font-color: #fff0f3;
+  --background: #84a98c;
+  --hover: #e9d1a0;
+  --span-color: #d7ac54;
+  --para-color: #de9c1a;
+}
+/* FONT SIZE */
+:root {
+  --Head-size: 2.3em;
+  --heading: 1.8em;
+  --nav: 1.4em;
+}
+/* FONT WEIGHT */
+:root {
+  --head: 500;
+  --navLink: 800;
+}
+/* SECTION MARGIN */
+section {
+  padding: 70px 20%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section h1 {
+  text-align: center;
+  font-size: var(--nav);
+  font-weight: var(--navLink);
+  color: var(--primary-color);
+  
+}
+.about__details {
+  margin-top: 30px;
+  box-shadow: 2px 2px 10px 1px #d4d0d0;
+ 
+  background-color:white;
+  border-radius: 15px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+.about__image {
+  width: 300px;
+  height: 500px;
+}
+.about__image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.about__content {
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about__content .first__para {
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.about__content .sec__para li {
+  padding-bottom: 20px;
+  margin: 0 10px;
+  line-height: 24px;
+}
+.buttons button {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: var(--head);
+
+  margin-right: 20px;
+  text-align: center;
+}
+.buttons a{
+  text-decoration: none;
+
+}
+.buttons .hire a{
+  color:var(--primary-color)
+}
+.buttons .hire {
+  border: none;
+  font-weight: var(--navLink);
+
+  transition: 0.5s linear;
+  background-color: var(--span-color);
+}
+.buttons .hire:hover {
+  background-color: var(--span-color);
+}
+
+.buttons .resume {
+  border: none;
+  background-color: var(--primary-color);
+  font-weight: var(--navLink);
+  transition: 0.5s linear;
+  color: var(--font-color);
+}
+.buttons .resume a{
+  color:white;
+}
+@media all and (max-width: 1000px) {
+  section {
+    padding: 40px 10%;
+  }
+  .about__image {
+    display: none;
+  }
+  .about__details {
+    height: 400px;
+  }
+}
+@media all and (max-width: 632px) {
+  .about__details {
+    height: 550px;
+  }
+}
+

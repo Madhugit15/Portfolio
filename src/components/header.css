@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* COLOR */
+:root {
+  --primary-color: #3b3030;
+  --font-color: #fff0f3;
+  --background: #84a98c;
+  --hover: #e9d1a0;
+  --span-color: #d7ac54;
+  --para-color: #de9c1a;
+}
+/* FONT SIZE */
+:root {
+  --heading: 2em;
+  --nav: 1.4em;
+}
+/* FONT WEIGHT */
+:root {
+  --head: 500;
+  --navLink: 600;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* HEADER PART */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  cursor: pointer;
+}
+/* NAME */
+.my__name {
+  margin-left: 25px;
+}
+.my__name h2 {
+  font-weight: var(--head);
+  font-size: var(--heading);
+}
+/* NAV LINKS */
+
+.nav__links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+.nav__links li a {
+  color: var(--font-color);
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.4s ease-in;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.nav__links li a:hover {
+  color: var(--span-color);
+}
+
+
+/* NAV BAR */
+.nav__bar {
+  margin-right: 30px;
+  font-size: var(--heading);
+  transition: 0.4s ease;
+  display: none;
+}
+
+.nav__bar:hover {
+  color: var(--hover);
+}
+
+/* MEDIA QUERY FOR 1015px */
+@media screen and (max-width: 1015px) {
+  header {
+    position: relative;
+  }
+  .my__name {
+    margin-left: 40px;
+  }
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: -100%;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    transition: 0.7s ease-in-out;
+  }
+  .nav__links.active {
+    left: 0;
+    right: 0;
+  }
+
+  .nav__links li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    padding: 10px;
+  }
+  .nav__links li a {
+    color: whitesmoke;
+  }
+  .nav__links li a:focus {
+    color: var(--span-color);
+  }
+
+  .nav__bar {
+    display: block;
+    margin-right: 40px;
+  }
+}
